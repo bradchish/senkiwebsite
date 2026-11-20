@@ -1,0 +1,653 @@
+<!doctype html><html lang="en-AU"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Kyokushin Karate Coffs Harbour</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Archivo:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&text=%E6%A5%B5%E7%9C%9F&display=swap">
+<style>
+  /* Layout: one long page. Wordmark bar, hero with an oversized kanji, then a column of ruled sections. The belt order is the one structural device because it is the real path a student follows. */
+  :root {
+    --bg: #ECEEEF;
+    --surface: #E1E4E6;
+    --fg: #0F1316;
+    --muted: #4A545B;
+    --rule: #B9C0C5;
+    --accent: #C8261E;
+    --accent-ink: #B01E17;
+    --on-accent: #FFFFFF;
+    --font-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+    --font-body: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-kanji: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    --belt-white: #F7F7F5;
+    --belt-orange: #E8782A;
+    --belt-blue: #2F6FB5;
+    --belt-yellow: #F0C419;
+    --belt-green: #2E8B57;
+    --belt-brown: #6B4426;
+    --belt-black: #15191C;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0E1114;
+      --surface: #171B1F;
+      --fg: #ECEEEF;
+      --muted: #9AA4AB;
+      --rule: #2B3238;
+      --accent: #FF5A4D;
+      --accent-ink: #FF6B5E;
+      --on-accent: #0E1114;
+      --belt-black: #000000;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1114;
+    --surface: #171B1F;
+    --fg: #ECEEEF;
+    --muted: #9AA4AB;
+    --rule: #2B3238;
+    --accent: #FF5A4D;
+    --accent-ink: #FF6B5E;
+    --on-accent: #0E1114;
+    --belt-black: #000000;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+  .wrap {
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .wrap > * { min-width: 0; }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    text-wrap: balance;
+    margin: 0;
+  }
+  p { margin: 0; max-width: 62ch; }
+
+  /* Header */
+  .bar { border-bottom: 1px solid var(--rule); }
+  .bar .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 32px;
+    padding-block: 18px;
+  }
+  .mark {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1;
+  }
+  .mark span { color: var(--accent-ink); }
+  nav { display: flex; flex-wrap: wrap; gap: 6px 24px; font-size: 0.95rem; font-weight: 600; }
+  nav a { text-decoration: none; padding-block: 4px; border-bottom: 2px solid transparent; }
+  nav a:hover { border-bottom-color: var(--accent); }
+
+  /* Hero */
+  .hero .wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 24px 48px;
+    align-items: center;
+    padding-block: clamp(40px, 7vw, 88px);
+  }
+  .eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    margin-bottom: 16px;
+  }
+  .hero h1 { font-size: clamp(3.4rem, 9vw, 7rem); }
+  .hero .lede { margin-top: 24px; font-size: 1.15rem; color: var(--muted); }
+  .hero .lede strong { color: var(--fg); font-weight: 600; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .btn {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    padding: 14px 24px;
+    border: 2px solid var(--fg);
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .btn.primary:hover { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+  .btn.ghost:hover { background: var(--fg); color: var(--bg); }
+
+  .kanji {
+    font-family: var(--font-kanji);
+    font-weight: 900;
+    font-size: clamp(9rem, 26vw, 21rem);
+    line-height: 0.82;
+    color: var(--fg);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    justify-self: center;
+    letter-spacing: 0.04em;
+  }
+  .kanji-caption {
+    grid-column: 2;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+    margin-top: -8px;
+  }
+  .kanji-caption b { color: var(--fg); font-weight: 600; }
+
+  /* Sections */
+  section { border-top: 1px solid var(--rule); }
+  section > .wrap { padding-block: clamp(48px, 7vw, 88px); }
+  .section-head {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+    gap: 16px 48px;
+    margin-bottom: 40px;
+    align-items: end;
+  }
+  .section-head h2 { font-size: clamp(2.4rem, 5.5vw, 4rem); }
+  .section-head p { color: var(--muted); }
+
+  /* Training */
+  .trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule); }
+  .trio article { padding: 28px; border-right: 1px solid var(--rule); }
+  .trio article:last-child { border-right: 0; }
+  .jp {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    margin-bottom: 10px;
+  }
+  .trio h3 { font-size: 2.2rem; margin-bottom: 12px; }
+  .trio p { color: var(--muted); font-size: 1rem; }
+
+  /* Classes */
+  .days { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .day { background: var(--surface); padding: 28px; display: grid; gap: 10px; align-content: start; }
+  .day .when { font-family: var(--font-display); font-weight: 800; font-size: 3rem; line-height: 0.9; text-transform: uppercase; }
+  .day .who { font-weight: 700; color: var(--accent-ink); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.8rem; }
+  .day p { color: var(--muted); font-size: 1rem; }
+  .where { margin-top: 24px; color: var(--muted); }
+  .where b { color: var(--fg); }
+
+  /* Belts */
+  .ladder { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+  .ladder li { display: grid; gap: 10px; align-content: start; }
+  .ladder .tape { height: 18px; background: var(--c); border: 1px solid var(--rule); }
+  .ladder .name { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .ladder-note { margin-top: 24px; color: var(--muted); }
+  .ladder-title { font-size: 2rem; margin-bottom: 20px; }
+  .junior-title { margin-top: 56px; }
+  .ladder.junior { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .ladder.junior .tape {
+    background: linear-gradient(var(--c), var(--c)) center / 100% 8px no-repeat, var(--base, var(--belt-white));
+  }
+  .ladder .detail { font-size: 0.88rem; line-height: 1.4; color: var(--muted); }
+  .times { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 0; }
+  .times li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 12px 0; border-top: 1px solid var(--rule); }
+  .times span { font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.8rem; color: var(--muted); }
+  .times b { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; line-height: 1; font-variant-numeric: tabular-nums; }
+
+  /* Fees */
+  .fees-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 420px; }
+  th, td { text-align: left; padding: 18px 20px; border-bottom: 1px solid var(--rule); }
+  thead th { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  tbody th { font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; text-transform: uppercase; }
+  td { font-family: var(--font-display); font-weight: 800; font-size: 2.4rem; line-height: 1; font-variant-numeric: tabular-nums; }
+  td small { font-family: var(--font-body); font-weight: 500; font-size: 0.85rem; color: var(--muted); margin-left: 6px; }
+  .fees-note { margin-top: 20px; color: var(--muted); font-size: 0.95rem; }
+
+  .extras { margin-top: 56px; }
+  .extras h3 { font-size: 2rem; margin-bottom: 20px; }
+  .extras dl { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; border: 1px solid var(--rule); }
+  .extras .item { padding: 20px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin: -1px 0 0 -1px; display: grid; gap: 6px; align-content: start; }
+  .extras dt { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  .extras dd { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 2.4rem; line-height: 1; font-variant-numeric: tabular-nums; }
+
+  /* About */
+  .about { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr); gap: 32px 48px; align-items: start; }
+  .about-facts { margin: 0; border: 1px solid var(--rule); background: var(--surface); }
+  .about-facts div { padding: 16px 20px; border-top: 1px solid var(--rule); }
+  .about-facts div:first-child { border-top: 0; }
+  .about-facts dt { font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; color: var(--muted); }
+  .about-facts dd { margin: 4px 0 0; font-size: 1.05rem; }
+  .about-text { display: grid; gap: 16px; max-width: 62ch; }
+  .about-text p { margin: 0; color: var(--muted); }
+  .about-text p:first-child { color: var(--fg); font-size: 1.15rem; }
+
+  /* Photos */
+  .gallery { columns: 3 280px; column-gap: 16px; }
+  .gallery figure { margin: 0 0 16px; break-inside: avoid; }
+  .gallery img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); background: var(--surface); }
+  .gallery figcaption { margin-top: 8px; font-size: 0.9rem; color: var(--muted); }
+
+  /* Trial form */
+  .trial-form { display: grid; gap: 20px; max-width: 760px; }
+  .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 24px; }
+  .field { display: grid; gap: 8px; align-content: start; min-width: 0; }
+  .field.wide { grid-column: 1 / -1; }
+  .field label { font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; color: var(--muted); }
+  .field label small { text-transform: none; letter-spacing: 0; font-weight: 400; font-size: 0.85rem; }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--fg);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 0;
+    padding: 13px 14px;
+    min-width: 0;
+  }
+  .field textarea { min-height: 120px; resize: vertical; }
+  .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; border-color: var(--fg); }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
+  button.btn { font-family: inherit; cursor: pointer; background: transparent; color: var(--fg); }
+  button.btn.primary { background: var(--accent); color: var(--on-accent); }
+  button.btn:disabled { opacity: 0.6; cursor: wait; }
+  .form-note { color: var(--muted); font-size: 0.9rem; }
+  .form-status { min-height: 1.5em; font-weight: 600; }
+  .form-status.ok { color: var(--fg); border-left: 4px solid var(--accent); padding-left: 12px; }
+  .form-status.err { color: var(--accent-ink); }
+
+  /* Visit */
+  .visit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; }
+  .visit h3 { font-size: 1.8rem; margin-bottom: 12px; }
+  .visit p { color: var(--muted); }
+  .visit ul { margin: 0; padding-left: 1.1em; color: var(--muted); display: grid; gap: 8px; }
+  .visit .contact-list { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 0; color: var(--fg); }
+  .visit .contact-list li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 12px; padding: 14px 0; border-top: 1px solid var(--rule); }
+  .visit .contact-list span { font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.8rem; color: var(--muted); padding-top: 3px; }
+  .visit .contact-list a { overflow-wrap: anywhere; }
+  .visit .contact-list .social-links { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 0; letter-spacing: 0; text-transform: none; font-size: 1rem; }
+  .visit .contact-list .social-links a.icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; }
+  .icon-btn svg, .foot-icon svg { display: block; }
+  .visit .contact-list address { font-style: normal; }
+
+  footer { border-top: 1px solid var(--rule); }
+  footer .wrap { padding-block: 32px; display: flex; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between; color: var(--muted); font-size: 0.9rem; }
+  .foot-social { display: inline-flex; gap: 6px; align-items: center; }
+  .foot-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: var(--fg); }
+  .foot-icon:hover { color: var(--accent-ink); }
+  footer .osu { font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; letter-spacing: 0.14em; color: var(--fg); text-transform: uppercase; }
+
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: minmax(0, 1fr); }
+    .kanji { order: -1; justify-self: start; writing-mode: horizontal-tb; font-size: clamp(6rem, 30vw, 10rem); line-height: 1; }
+    .kanji-caption { grid-column: 1; order: -1; text-align: left; margin-top: -16px; }
+    .section-head { grid-template-columns: minmax(0, 1fr); }
+    .trio { grid-template-columns: minmax(0, 1fr); }
+    .trio article { border-right: 0; border-bottom: 1px solid var(--rule); }
+    .trio article:last-child { border-bottom: 0; }
+    .days { grid-template-columns: minmax(0, 1fr); }
+    .ladder, .ladder.junior { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px; }
+    .visit { grid-template-columns: minmax(0, 1fr); }
+    .about { grid-template-columns: minmax(0, 1fr); }
+    .form-grid { grid-template-columns: minmax(0, 1fr); }
+    table { min-width: 0; }
+    th, td { padding: 14px 8px; }
+    thead th { font-size: 0.7rem; letter-spacing: 0.06em; }
+    tbody th { font-size: 1.3rem; }
+    td { font-size: 1.8rem; }
+    td small { display: block; margin: 4px 0 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top">Kyokushin Coffs Harbour<span>.</span></a>
+    <nav aria-label="Main">
+      <a href="#train">Training</a>
+      <a href="#classes">Classes</a>
+      <a href="#about">About</a>
+      <a href="#photos">Photos</a>
+      <a href="#trial">Free trial</a>
+      <a href="#grading">Grading</a>
+      <a href="#fees">Fees</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">A MOKKA dojo</p>
+        <h1>Kyokushin karate in Coffs Harbour.</h1>
+        <p class="lede">This dojo is part of <strong>MOKKA</strong>, Mas Oyama's Kyokushin Karate Australia. Kyokushin is a full-contact style founded by Masutatsu Oyama, and the name means "ultimate truth".</p>
+        <div class="actions">
+          <a class="btn primary" href="#trial">Book a free trial</a>
+          <a class="btn ghost" href="#classes">See classes</a>
+        </div>
+      </div>
+      <div class="kanji" role="img" aria-label="Kyokushin written in Japanese: 極真">極真</div>
+      <p class="kanji-caption"><b>Kyokushin</b> &middot; ultimate truth</p>
+    </div>
+  </div>
+
+  <section id="train">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What you train</h2>
+        <p>Kyokushin practice rests on three parts. Every student works on all three as they move up through the grades.</p>
+      </div>
+      <div class="trio">
+        <article>
+          <p class="jp">Kihon</p>
+          <h3>Basics</h3>
+          <p>Stances, punches, kicks, blocks and movement, repeated until they hold up under pressure.</p>
+        </article>
+        <article>
+          <p class="jp">Kata</p>
+          <h3>Forms</h3>
+          <p>Set sequences of techniques that teach balance, rhythm, timing and focus.</p>
+        </article>
+        <article>
+          <p class="jp">Kumite</p>
+          <h3>Sparring</h3>
+          <p>Full-contact sparring, built up gradually, where the basics get tested against a real partner.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="classes">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Classes in Coffs Harbour</h2>
+        <p>Kids and adults train on Monday and Wednesday, in separate classes. Train once a week, or come to both days.</p>
+      </div>
+      <div class="days">
+        <article class="day">
+          <p class="who">Every Monday</p>
+          <p class="when">Monday</p>
+          <ul class="times">
+            <li><span>Kids</span><b>5:00 to 6:00pm</b></li>
+            <li><span>Adults</span><b>5:00 to 7:00pm</b></li>
+          </ul>
+        </article>
+        <article class="day">
+          <p class="who">Every Wednesday</p>
+          <p class="when">Wednesday</p>
+          <ul class="times">
+            <li><span>Kids</span><b>5:00 to 6:00pm</b></li>
+            <li><span>Adults</span><b>5:00 to 7:00pm</b></li>
+          </ul>
+        </article>
+      </div>
+      <p class="where"><b>New students:</b> beginners are welcome. Ask about a first visit before you join. Classes are at L block, mezzanine level, 353 Hogbin Drive, Coffs Harbour.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Your instructor</h2>
+        <p>Sempai Bradley Chisholm, 2nd Dan, founder and head instructor.</p>
+      </div>
+      <div class="about">
+        <dl class="about-facts">
+          <div><dt>Rank</dt><dd>2nd Dan black belt</dd></div>
+          <div><dt>Training since</dt><dd>2013, aged seven</dd></div>
+          <div><dt>Instructing</dt><dd>Ballina Dojo for three years, then Coffs Harbour from 2025</dd></div>
+          <div><dt>Judo</dt><dd>Started in 2026, orange belt (4th kyu)</dd></div>
+          <div><dt>Competition</dt><dd>2026: knockdown division wins at the AMAC Championships and the So-Kyokushin National Championships</dd></div>
+        </dl>
+        <div class="about-text">
+          <p>Bradley Chisholm has trained in Kyokushin karate for over 13 years. He started in New Zealand in 2013 at seven years old. After moving to Australia in 2014 he joined the Ballina Dojo under Shihan Jon Ellis.</p>
+          <p>He earned his 1st Dan in June 2022 under Hanshi Howard Lipman, and his 2nd Dan on 7 December 2024 under Shihan Rick Cunningham. He competes in kata and full-contact kumite. Results include gold at the Gold Coast Budo Challenge in 2023, silver in 2024, and in 2026 knockdown divisions won at the AMAC Championships in Port Macquarie and the So-Kyokushin National Championships in Sydney.</p>
+          <p>Brad spent three years instructing at the Ballina Dojo, teaching students of different ages and abilities. In 2025 he moved to Coffs Harbour and started Kyokushin Karate Coffs Harbour. In 2026 he also began training judo, and has reached orange belt (4th kyu).</p>
+          <p>He teaches karate as more than fighting. It builds focus, confidence, respect and self-discipline, and those carry well beyond the dojo. Classes combine traditional values with an encouraging environment where every student is challenged to improve, whatever their starting ability or experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="photos">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Photos</h2>
+        <p>Training at the dojo, plus a few moments from competition and visiting seminars.</p>
+      </div>
+      <div class="gallery">
+        <figure><img src="images/class-stances.jpg" width="1400" height="788" loading="lazy" alt="Adults and kids practising a fighting stance together on the dojo mats"><figcaption>Kids and adults training together</figcaption></figure>
+        <figure><img src="images/kids-class.jpg" width="1050" height="1400" loading="lazy" alt="Kids lined up on the mats during a class"><figcaption>A kids class under way</figcaption></figure>
+        <figure><img src="images/kicking-drill.jpg" width="1050" height="1400" loading="lazy" alt="Students lifting their knees in a kicking drill facing an instructor"><figcaption>Kicking drills</figcaption></figure>
+        <figure><img src="images/pad-drill.jpg" width="787" height="1400" loading="lazy" alt="Two students working on punching technique with a kicking pad"><figcaption>Pad work</figcaption></figure>
+        <figure><img src="images/pad-kick.jpg" width="787" height="1400" loading="lazy" alt="A student kicking a pad held by a partner"><figcaption>Kicking the pad</figcaption></figure>
+        <figure><img src="images/bowing-in.jpg" width="1400" height="1050" loading="lazy" alt="Students kneeling in a row at the start of class"><figcaption>Kneeling at the start of class</figcaption></figure>
+        <figure><img src="images/partner-drill.jpg" width="787" height="1400" loading="lazy" alt="Two students practising a technique with a partner"><figcaption>Partner practice</figcaption></figure>
+        <figure><img src="images/high-kick.jpg" width="982" height="1400" loading="lazy" alt="A student landing a high kick on a partner in front of Kyokushin posters"><figcaption>Sparring practice</figcaption></figure>
+        <figure><img src="images/tournament.jpg" width="1400" height="774" loading="lazy" alt="Competitors and officials lined up with medals and trophies at a tournament"><figcaption>Competition day</figcaption></figure>
+        <figure><img src="images/group.jpg" width="1400" height="1170" loading="lazy" alt="A group of students of different ages and belt colours standing together"><figcaption>The dojo group</figcaption></figure>
+        <figure><img src="images/seminar.jpg" width="1400" height="631" loading="lazy" alt="A large group of Kyokushin karate students and seniors in a dojo"><figcaption>Training with the wider Kyokushin family</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="trial">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Book a free trial class</h2>
+        <p>Tell us a little about who will be training and we will reply to arrange a time. Trial classes are on Monday or Wednesday evenings.</p>
+      </div>
+      <form class="trial-form" id="trial-form" name="trial" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="trial">
+        <input type="hidden" name="subject" value="New trial class request from the website">
+        <p class="hp" aria-hidden="true"><label>Leave this empty: <input name="bot-field" type="text" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="who">Who is the class for?</label>
+            <select id="who" name="who" required>
+              <option value="Myself">Myself</option>
+              <option value="My child">My child</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="student-name">Student's name</label>
+            <input id="student-name" name="student-name" type="text" autocomplete="off" required>
+          </div>
+          <div class="field">
+            <label for="age">Student's age</label>
+            <input id="age" name="age" type="number" inputmode="numeric" min="1" max="99" required>
+          </div>
+          <div class="field">
+            <label for="guardian-name">Parent or guardian <small>(if the student is under 18)</small></label>
+            <input id="guardian-name" name="guardian-name" type="text" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone <small>(optional)</small></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field wide">
+            <label for="day">Preferred day</label>
+            <select id="day" name="day">
+              <option value="Either day">Either day</option>
+              <option value="Monday">Monday</option>
+              <option value="Wednesday">Wednesday</option>
+            </select>
+          </div>
+          <div class="field wide">
+            <label for="message">Questions <small>(optional)</small></label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+        </div>
+        <p class="form-note">Please do not put medical details in this form. Tell the instructor in person at your first class. We use these details only to reply about your trial class.</p>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Send trial request</button>
+          <p class="form-status" id="trial-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="grading">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The belt path</h2>
+        <p>MOKKA uses two belt systems. Adults wear solid belts. Juniors wear a belt with a coloured stripe and move up in smaller steps.</p>
+      </div>
+      <h3 class="ladder-title">Adults</h3>
+      <ol class="ladder" aria-label="Adult belt order from white to black">
+        <li style="--c: var(--belt-white)"><span class="tape"></span><span class="name">White</span></li>
+        <li style="--c: var(--belt-orange)"><span class="tape"></span><span class="name">Orange</span></li>
+        <li style="--c: var(--belt-blue)"><span class="tape"></span><span class="name">Blue</span></li>
+        <li style="--c: var(--belt-yellow)"><span class="tape"></span><span class="name">Yellow</span></li>
+        <li style="--c: var(--belt-green)"><span class="tape"></span><span class="name">Green</span></li>
+        <li style="--c: var(--belt-brown)"><span class="tape"></span><span class="name">Brown</span></li>
+        <li style="--c: var(--belt-black)"><span class="tape"></span><span class="name">Black</span></li>
+      </ol>
+      <p class="ladder-note">Black belt is where the dan grades begin, not the end of training.</p>
+
+      <h3 class="ladder-title junior-title">Juniors</h3>
+      <ol class="ladder junior" aria-label="Junior belt order from orange to junior black belt">
+        <li style="--c: var(--belt-orange)"><span class="tape"></span><span class="name">Orange</span><span class="detail">3 levels (10th kyu), then 9th kyu</span></li>
+        <li style="--c: var(--belt-blue)"><span class="tape"></span><span class="name">Blue</span><span class="detail">3 levels (8th kyu), then 7th kyu</span></li>
+        <li style="--c: var(--belt-yellow)"><span class="tape"></span><span class="name">Yellow</span><span class="detail">3 levels (6th kyu), then 5th kyu</span></li>
+        <li style="--c: var(--belt-green)"><span class="tape"></span><span class="name">Green</span><span class="detail">3 levels (4th kyu), then 3rd kyu</span></li>
+        <li style="--c: var(--belt-brown)"><span class="tape"></span><span class="name">Brown</span><span class="detail">3 levels (2nd kyu), then 1st kyu</span></li>
+        <li style="--c: var(--belt-white); --base: var(--belt-black)"><span class="tape"></span><span class="name">Junior black</span><span class="detail">Black with a white stripe</span></li>
+      </ol>
+      <p class="ladder-note">Solid belt colours are for students from about 15 or 16 years old. The junior black belt is for juniors who have reached a high technical and personal standard but are not yet ready to safely attempt a senior shodan (black belt) grading. Ask your instructor if you have any questions.</p>
+    </div>
+  </section>
+
+  <section id="fees">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Fees</h2>
+        <p>Paid per school term. The price depends on how many classes you attend each week.</p>
+      </div>
+      <div class="fees-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col"></th><th scope="col">One class a week</th><th scope="col">Two classes a week</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Kids</th><td>$150<small>per term</small></td><td>$200<small>per term</small></td></tr>
+            <tr><th scope="row">Adults</th><td>$180<small>per term</small></td><td>$240<small>per term</small></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="extras">
+        <h3>Uniform, gear and grading</h3>
+        <dl>
+          <div class="item"><dt>Gi (uniform)</dt><dd>$50</dd></div>
+          <div class="item"><dt>Grading</dt><dd>$25</dd></div>
+          <div class="item"><dt>Gloves</dt><dd>$20</dd></div>
+          <div class="item"><dt>Shin pads</dt><dd>$20</dd></div>
+          <div class="item"><dt>Mouth guard</dt><dd>$10</dd></div>
+        </dl>
+        <p class="fees-note">Term fees cover training only. Gear and grading are paid separately, and a uniform is not needed for a first visit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Come and train</h2>
+        <p>The best way to find out whether kyokushin suits you is to watch a class or try one.</p>
+      </div>
+      <div class="visit">
+        <div>
+          <h3>Before your first class</h3>
+          <ul>
+            <li>Wear loose, comfortable clothes. A uniform is not needed to start.</li>
+            <li>Arrive a few minutes early and bring water.</li>
+            <li>Tell the instructor about any injuries or health conditions.</li>
+            <li>Expect to hear "Osu". It is the greeting and the answer to almost everything in the dojo.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Get in touch</h3>
+          <p>Contact us to arrange a first visit, ask about the right class for your age, or find out more about MOKKA.</p>
+          <ul class="contact-list">
+            <li><span>Phone</span><a href="tel:0490095333">0490 095 333</a></li>
+            <li><span>Email</span><a href="mailto:bradchisholm06@gmail.com">bradchisholm06@gmail.com</a></li>
+            <li><span>Social</span><span class="social-links"><a class="btn ghost icon-btn" href="https://www.instagram.com/mokka.coffs.harbour/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="btn ghost icon-btn" href="https://www.facebook.com/profile.php?id=61577713940890" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.7 1.8-1.7h1.5V3.4c-.3 0-1.3-.2-2.4-.2-2.6 0-4.2 1.5-4.2 4.3v2.3H7.5V13h2.7v8h3.3z"/></svg></a></span></li>
+            <li><span>Where</span><address>L block, mezzanine level<br>353 Hogbin Drive<br>Coffs Harbour NSW 2450</address></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="osu">Osu</span>
+    <span>Kyokushin Karate Coffs Harbour &middot; Part of MOKKA</span>
+    <span class="foot-social"><a class="foot-icon" href="https://www.instagram.com/mokka.coffs.harbour/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="foot-icon" href="https://www.facebook.com/profile.php?id=61577713940890" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.7 1.8-1.7h1.5V3.4c-.3 0-1.3-.2-2.4-.2-2.6 0-4.2 1.5-4.2 4.3v2.3H7.5V13h2.7v8h3.3z"/></svg></a></span>
+  </div>
+</footer>
+<script>
+(function () {
+  var form = document.getElementById('trial-form');
+  var status = document.getElementById('trial-status');
+  if (!form || !status) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    status.className = 'form-status';
+    status.textContent = 'Sending...';
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    }).then(function (res) {
+      if (!res.ok) throw new Error('not ok');
+      status.className = 'form-status ok';
+      status.textContent = 'Thanks. We have your details and will reply by email or phone to arrange your trial class.';
+      form.reset();
+    }).catch(function () {
+      status.className = 'form-status err';
+      status.textContent = 'Sorry, that did not send. Please call 0490 095 333 or email bradchisholm06@gmail.com.';
+    }).then(function () {
+      btn.disabled = false;
+    });
+  });
+})();
+</script>
+</body></html>
